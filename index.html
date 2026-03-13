@@ -110,6 +110,21 @@
       border-bottom: 1px solid var(--border-subtle);
     }
 
+    .header-logo {
+      margin-bottom: 1.2rem;
+      display: flex;
+    }
+    .header-logo img {
+      height: 48px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+      transition: transform 0.3s ease;
+    }
+    .header-logo img:hover {
+      transform: scale(1.02);
+    }
+
     .status-badge {
       display: inline-flex;
       align-items: center;
@@ -431,6 +446,8 @@
       .card-footer  { grid-area: footer; border-top: 1px solid var(--border-subtle); padding: 0.8rem 2rem 1.2rem; }
 
       .name { font-size: 32px; }
+      .header-logo { margin-bottom: 1.5rem; }
+      .header-logo img { height: 56px; }
     }
   </style>
 </head>
@@ -445,6 +462,10 @@
 
     <!-- HEADER -->
     <div class="card-header">
+      <div class="header-logo">
+        <img src="logo.png" alt="Develifas Software Engineering">
+      </div>
+
       <div class="status-badge">
         <div class="status-dot"></div>
         available for projects
